@@ -1,0 +1,5 @@
+cffi==2.1.1
+cryptography==50.0.1
+dnspython==2.8.0
+pycparser==3.0
+pyOpenSSL==26.4.0

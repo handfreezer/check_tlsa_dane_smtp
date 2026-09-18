@@ -1,0 +1,25 @@
+{
+  "servers": [
+    {
+      "hostname": "mail.server.com",
+      "port": 25,
+      "alert_days_before_expiry": 15
+    }
+  ],
+  "network_timeout": 10,
+  "mail": {
+    "smtp_host": "mail.server.com",
+    "smtp_port": 587,
+    "use_starttls": true,
+    "tls_verify": true,
+    "username": "check-tlsa@server.com",
+    "password": "password_here",
+    "mail_from": "check-tlsa@server.com",
+    "mail_to": ["postmaster@server.com"],
+    "always_send_report": true,
+    "subject_prefix": "[Rapport DANE/TLS]"
+  },
+  "log_file": "/var/log/check_dane_smtp.log",
+  "log_level": "INFO"
+}
+

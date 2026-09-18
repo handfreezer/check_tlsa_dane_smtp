@@ -1,0 +1,16 @@
+# Dépendances pour check_dane_smtp.py
+#
+# Installation :
+#   pip3 install -r requirements.txt
+
+# Résolution et lecture des enregistrements DNS TLSA (DANE)
+dnspython>=2.4.0
+
+# Analyse des certificats X.509 (dates de validité, SubjectPublicKeyInfo, ...)
+cryptography>=41.0.0
+
+# Négociation TLS bas niveau permettant de récupérer la CHAÎNE COMPLÈTE de
+# certificats (get_peer_cert_chain), indispensable à la vérification stricte
+# des enregistrements TLSA d'usage 0/2 (ancrage CA), que le module ssl
+# standard ne permet pas d'obtenir côté client.
+pyOpenSSL>=23.2.0
